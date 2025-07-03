@@ -152,8 +152,8 @@ say you want to delete a campaign and all its associated ads, you could do it at
 .. code-block:: sql
 
     BEGIN;
-    DELETE FROM campaigns WHERE id = 46 AND company_id = 5;
     DELETE FROM ads WHERE campaign_id = 46 AND company_id = 5;
+    DELETE FROM campaigns WHERE id = 46 AND company_id = 5;
     COMMIT;
 
 Each statement in a transactions causes roundtrips between the coordinator and
